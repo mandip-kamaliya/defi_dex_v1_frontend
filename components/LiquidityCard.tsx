@@ -150,7 +150,7 @@ export default function LiquidityCard({ className }: LiquidityCardProps) {
     <div className={cn("card max-w-md mx-auto", className)}>
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-semibold text-white">Liquidity</h2>
-        <button className="p-2 text-secondary-400 hover:text-white transition-colors">
+        <button className="p-2 text-secondary-400 hover:text-white transition-colors cursor:pointer">
           <Settings className="h-5 w-5" />
         </button>
       </div>
