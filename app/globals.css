@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 25 89% 53%;
+    --primary-foreground: 0 0% 96%;
+    --secondary: 120 6% 20%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 4%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 96%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 96%;
+    --border: 0 0% 16%;
+    --input: 0 0% 10%;
+    --ring: 25 89% 53%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-700 hover:bg-secondary-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-card border border-border rounded-xl p-6 shadow-2xl backdrop-blur-sm bg-opacity-95;
+  }
+  
+  .input-field {
+    @apply bg-input border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition-all duration-200;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-400 via-primary-500 to-accent-500 bg-clip-text text-transparent;
+  }
+} 
